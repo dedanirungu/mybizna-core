@@ -1,0 +1,132 @@
+{
+    "pods": [
+        {
+            "name": "mybizna_payment",
+            "label": "Payment",
+            "label_singular": "Payment",
+            "type": "pod",
+            "storage": "table",
+            "public": true,
+            "show_ui": "1",
+            "pod_index": "name",
+            "show_in_menu": "1",
+            "ui_style": "post_type",
+            "menu_position": "5",
+            "menu_icon": "dashicons-star-empty",
+            "ui_actions_enabled": [
+                "add",
+                "edit",
+                "duplicate",
+                "delete",
+                "reorder",
+                "export"
+            ],
+            "ui_fields_manage": [
+                "name",
+                "post_id",
+                "invoice_id",
+                "package_id",
+                "amount",
+                "payment_status",
+                "created",
+                "modified",
+                "author",
+                "id"
+            ],
+            "ui_filters": [
+                "name",
+                "post_id",
+                "invoice_id",
+                "package_id",
+                "amount",
+                "payment_status",
+                "created",
+                "modified",
+                "author"
+            ],
+            "fields": [
+                {
+                    "name": "name",
+                    "label": "Name",
+                    "description": "",
+                    "weight": 0,
+                    "type": "text",
+                    "required": "1"
+                },
+                {
+                    "name": "post_id",
+                    "label": "Post",
+                    "type": "text",
+                    "weight": 1,
+                    "required": "1"
+                },
+                {
+                    "name": "invoice_id",
+                    "label": "Invoice",
+                    "type": "text",
+                    "weight": 1,
+                    "required": "1"
+                },
+                {
+                    "name": "package_id",
+                    "label": "Package",
+                    "type": "text",
+                    "weight": 1,
+                    "required": "1"
+                },
+                {
+                    "name": "amount",
+                    "label": "Amount",
+                    "type": "text",
+                    "weight": 1,
+                    "required": "1"
+                },
+                {
+                    "name": "payment_status",
+                    "label": "Status",
+                    "type": "text",
+                    "weight": 1,
+                    "required": "1"
+                },
+                {
+                    "name": "created",
+                    "label": "Date Created",
+                    "description": "",
+                    "weight": 2,
+                    "type": "datetime",
+                    "datetime_format": "ymd_slash",
+                    "datetime_time_type": "12",
+                    "datetime_time_format": "h_mm_ss_A"
+                },
+                {
+                    "name": "modified",
+                    "label": "Date Modified",
+                    "description": "",
+                    "weight": 2,
+                    "type": "datetime",
+                    "datetime_format": "ymd_slash",
+                    "datetime_time_type": "12",
+                    "datetime_time_format": "h_mm_ss_A"
+                },
+                {
+                    "name": "author",
+                    "label": "Author",
+                    "description": "",
+                    "weight": 2,
+                    "type": "pick",
+                    "pick_object": "user",
+                    "pick_format_type": "single",
+                    "pick_format_single": "autocomplete",
+                    "default_value": "{@user.ID}"
+                },
+                {
+                    "name": "permalink",
+                    "label": "Permalink",
+                    "description": "Leave blank to auto-generate from Name",
+                    "weight": 3,
+                    "type": "slug"
+                }
+            ]
+        }
+    ]
+}
